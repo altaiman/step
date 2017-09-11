@@ -110,3 +110,21 @@ $(function() {
         console.log(file[0].files[0]);
     })
 })
+
+$(function() {
+    // history
+
+    $('.history__year a').on('click', function(e) {
+        e.preventDefault();
+        $('.year').hide();
+        $('.history__year_active').removeClass('history__year_active');
+
+        var year = $(this).attr('href').split('#')[1];
+        $(this).parent().addClass('history__year_active');
+
+
+        $('.year[data-year="' + year + '"]').fadeIn();
+    });
+
+    $('.history__year a').first().trigger('click');
+});
