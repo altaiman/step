@@ -128,3 +128,13 @@ $(function() {
 
     $('.history__year a').first().trigger('click');
 });
+
+$(function(){
+    // menu
+
+    $('.menu__item_sub').hover(function() {
+        $(this).find('.menu__sub').finish().show();
+    }, function() {
+        $(this).find('.menu__sub').finish().hide();
+    });
+});
