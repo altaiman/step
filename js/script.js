@@ -44,6 +44,7 @@ $(function(){
 $(function(){
     $('.production__slider').slick({
         slidesToShow: 4,
+        variableWidth: true,
         prevArrow: '.production__controls .arrow_prev',
         nextArrow: '.production__controls .arrow_next',
     })
@@ -107,7 +108,6 @@ $(function() {
 
     $(file).on('change', function() {
         $('.upload__filename').show().html(file[0].files[0].name);
-        console.log(file[0].files[0]);
     })
 })
 
